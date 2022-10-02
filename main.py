@@ -21,9 +21,14 @@ def get_score():
     for f in upload:
         os.remove(f)
     shutil.rmtree("./runs/detect", ignore_errors=False)
-    print("------")
-    print(results)
+
+    # Reading file
+    # with open("./img.png", "wb") as fh:
+    #     fh.write(base64.b64decode(results['image'][1:-1]))
+   
     return results
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=30123)
 
